@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oPo-u7-Fci">
-                                <rect key="frame" x="0.0" y="294" width="375" height="234"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dqY-ZO-6FG">
                                     <size key="itemSize" width="128" height="128"/>
@@ -42,8 +42,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="oPo-u7-Fci" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="00H-VJ-LzX"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oPo-u7-Fci" secondAttribute="bottom" constant="250" id="FI5-Pt-RWs"/>
-                            <constraint firstItem="oPo-u7-Fci" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="250" id="Ju0-e4-TWz"/>
+                            <constraint firstItem="oPo-u7-Fci" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="1pj-JX-WK5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oPo-u7-Fci" secondAttribute="bottom" id="IDH-N5-ZYH"/>
                             <constraint firstItem="oPo-u7-Fci" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="VxS-dZ-nih"/>
                         </constraints>
                     </view>

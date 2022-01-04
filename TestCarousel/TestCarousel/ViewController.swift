@@ -7,9 +7,32 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UICollectionViewDelegate {
 
-    @IBOutlet weak var carouselCV: UICollectionView!
+    
+    let screenSize = UIScreen.main.bounds
+    
+    @IBOutlet weak var carouselCV: UICollectionView!{
+        didSet {
+            let collectionViewLayout = CarouselLayout()
+
+
+            carouselCV.delegate = self
+            carouselCV.dataSource = self
+            carouselCV.collectionViewLayout = collectionViewLayout
+            carouselCV.backgroundColor = .clear
+            carouselCV.alpha = 0
+                    
+            carouselCV.contentInsetAdjustmentBehavior = .never
+            let cellWidth: CGFloat = floor(screenSize.width * (263/375))
+            let insetX = (carouselCV.bounds.width - cellWidth) / 2.0
+                    
+            carouselCV.contentInset = UIEdgeInsets(top: 0, left: insetX, bottom: 0, right: insetX)
+            carouselCV.decelerationRate = .normal
+                    
+                }
+            }
+    
     
     var carouselList:[CarouselDataModel] = []
     
@@ -21,15 +44,15 @@ class ViewController: UIViewController {
         registerXib()
         makeDelegate()
         
-        let flowLayout: CarouselLayout  // 이 타입의
-            flowLayout = CarouselLayout()  // 인스턴스 생성
-            
-            self.carouselCV.collectionViewLayout = flowLayout
+//        let flowLayout: CarouselLayout  // 이 타입의
+//            flowLayout = CarouselLayout()  // 인스턴스 생성
+//
+//            self.carouselCV.collectionViewLayout = flowLayout
     }
     
     func makeDelegate() {
-        carouselCV.delegate = self
-        carouselCV.dataSource = self
+//        carouselCV.delegate = self
+//        carouselCV.dataSource = self
     }
     
     func registerXib() {
@@ -66,24 +89,24 @@ extension ViewController: UICollectionViewDataSource {
     }
 }
 
-extension ViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        let screenWidth = UIScreen.main.bounds.width
-//        let cellWidth = screenWidth
-//        let cellHeight = cellWidth * (200/375)
-//        return CGSize(width: cellWidth, height: cellHeight)
-        return CGSize(width: 375, height: 200)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        UIEdgeInsets.zero
-    }
-        
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        0
-    }
-        
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        0
-    }
-}
+//extension ViewController: UICollectionViewDelegateFlowLayout {
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+////        let screenWidth = UIScreen.main.bounds.width
+////        let cellWidth = screenWidth
+////        let cellHeight = cellWidth * (200/375)
+////        return CGSize(width: cellWidth, height: cellHeight)
+//        return CGSize(width: 375, height: 200)
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+//        UIEdgeInsets.zero
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+//        0
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+//        0
+//    }
+//}
