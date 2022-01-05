@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AppleLogin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NRR-7c-UKl">
+                                <rect key="frame" x="52" y="653" width="264" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="KZs-1w-CEm"/>
+                                    <constraint firstAttribute="width" constant="264" id="WdU-Sl-Cbb"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="apple-id-sign-in-with_2x"/>
+                                <connections>
+                                    <action selector="appleLoginClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gx9-Y9-CZd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NRR-7c-UKl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="609" id="SSR-q6-xob"/>
+                            <constraint firstItem="NRR-7c-UKl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="52" id="uda-JR-o6B"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="84.975369458128085"/>
+        </scene>
+        <!--SuccessVC-->
+        <scene sceneID="4ph-Hi-S4Y">
+            <objects>
+                <viewController storyboardIdentifier="SuccessVC" id="say-FP-WXP" customClass="SuccessVC" customModule="AppleLogin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dd5-kz-yb4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z2i-yb-kjO">
+                                <rect key="frame" x="20" y="59" width="13" height="22"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="chevron.left" catalog="system"/>
+                                <connections>
+                                    <action selector="touchUpToGoBack:" destination="say-FP-WXP" eventType="touchUpInside" id="EoX-c9-8oh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="성공 성공 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fl-xk-AWb">
+                                <rect key="frame" x="150" y="429" width="68" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dpO-po-e7u"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7fl-xk-AWb" firstAttribute="leading" secondItem="dpO-po-e7u" secondAttribute="leading" constant="150" id="CHW-To-Y5U"/>
+                            <constraint firstItem="z2i-yb-kjO" firstAttribute="leading" secondItem="dpO-po-e7u" secondAttribute="leading" constant="20" id="LHz-71-R2m"/>
+                            <constraint firstItem="z2i-yb-kjO" firstAttribute="top" secondItem="dpO-po-e7u" secondAttribute="top" constant="15" id="X6m-aE-Moh"/>
+                            <constraint firstItem="7fl-xk-AWb" firstAttribute="top" secondItem="dpO-po-e7u" secondAttribute="top" constant="385" id="Xlz-Uq-hFD"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yDp-Ri-erI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="881" y="85"/>
+        </scene>
+        <!--FailVC-->
+        <scene sceneID="Glc-m7-2bs">
+            <objects>
+                <viewController storyboardIdentifier="FailVC" id="oQg-oG-IWg" customClass="FailVC" customModule="AppleLogin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lni-rl-KKh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xkn-XI-YaN">
+                                <rect key="frame" x="20" y="59" width="13" height="22"/>
+                                <color key="tintColor" systemColor="systemPinkColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="chevron.left" catalog="system"/>
+                                <connections>
+                                    <action selector="touchUpToGoBack:" destination="oQg-oG-IWg" eventType="touchUpInside" id="TdK-we-ktx"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="실패 실패" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ReA-zN-E5j">
+                                <rect key="frame" x="150" y="431" width="64" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemPinkColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yNm-GF-WMX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ReA-zN-E5j" firstAttribute="top" secondItem="yNm-GF-WMX" secondAttribute="top" constant="387" id="LpT-2W-CvX"/>
+                            <constraint firstItem="ReA-zN-E5j" firstAttribute="leading" secondItem="yNm-GF-WMX" secondAttribute="leading" constant="150" id="bHj-wA-0GD"/>
+                            <constraint firstItem="Xkn-XI-YaN" firstAttribute="top" secondItem="yNm-GF-WMX" secondAttribute="top" constant="15" id="ezX-X5-rhv"/>
+                            <constraint firstItem="Xkn-XI-YaN" firstAttribute="leading" secondItem="yNm-GF-WMX" secondAttribute="leading" constant="20" id="t2c-25-MDu"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tq9-Qc-86r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1638" y="85"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="apple-id-sign-in-with_2x" width="424" height="76"/>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
