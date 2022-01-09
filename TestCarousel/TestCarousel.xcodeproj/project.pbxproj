@@ -66,11 +66,11 @@
 			children = (
 				F2EC39DC2749415900805FE3 /* AppDelegate.swift */,
 				F2EC39DE2749415900805FE3 /* SceneDelegate.swift */,
-				F2EC39E02749415900805FE3 /* ViewController.swift */,
-				F2EC39E22749415900805FE3 /* Main.storyboard */,
 				F2EC39E52749415A00805FE3 /* Assets.xcassets */,
 				F2EC39E72749415A00805FE3 /* LaunchScreen.storyboard */,
 				F2EC39EA2749415A00805FE3 /* Info.plist */,
+				F2EC39E22749415900805FE3 /* Main.storyboard */,
+				F2EC39E02749415900805FE3 /* ViewController.swift */,
 				F2EC39F02749424400805FE3 /* CarouselLayout.swift */,
 				F2EC39F2274946D400805FE3 /* CarouselCVC.swift */,
 				F2EC39F3274946D400805FE3 /* CarouselCVC.xib */,
